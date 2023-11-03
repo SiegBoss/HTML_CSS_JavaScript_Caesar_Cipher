@@ -1,0 +1,37 @@
+<!-- Cifrado Cesar | Cesar Cipher -->
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Cifrado Cesar</title>
+    </head>
+
+    <body>
+        <!--Enklazar CSS Normalize | Link CSS Normalize-->
+        <link rel="stylesheet" type="text/css" href="normalize.css" />
+        <!--Enklazar CSS Estilo | Link CSS Style-->
+        <link rel="stylesheet" type="text/css" href="caesar_cipher.css" />
+        <!--Enklazar Google Fonts | Link Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Montserrat:wght@600&family=Pixelify+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet" />
+
+        <!--Contenedor principal | Main container-->
+        <div class="container-div">
+            <!--Titulo | Title-->
+            <h1>Cifrado Cesar</h1>
+            <!--Contenedor de entrada | Input container-->
+            <input type="text" class="container-div__input-entry" value="Ingrese un Texto" onfocus="updatetext(this.value)" />
+            <!--Contenedor de salida | Output container-->
+            <input type="text" id="container-div__input-cipher" disabled />
+            <!--Contenedor de rango | Range container-->
+            <div class="container-div__div">
+                <input type="range" min="1" max="26" value="13" class="container-div__div-input" oninput="updatenumbers(this.value)">
+                <!--Valor del rango | Range value-->
+                <p id="container-div__div-text">50</p>
+            </div>
+            <!--Boton de cifrado | Cipher button-->
+            <button type="button" class="container-div__button-cipher" onclick="cipher()">Cifrar</button>
+        </div>
+        <!--Enlazar html con JS | Link html with JS-->
+        <script src="caesar_cipher.js"></script>
+    </body>
+</html>
