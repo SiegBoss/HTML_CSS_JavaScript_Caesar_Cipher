@@ -8,8 +8,8 @@ body {
 /*titulo | title*/
 h1{
     color: #EDDDD4;
-    height: 60px;
-    font-size: 30px;
+    height: 80px;
+    font-size: 40px;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -18,10 +18,10 @@ h1{
 
 /*Contenedor de los botones | Container of the buttons*/
 .container-div{
-    width: 300px;
-    height: 200px;
+    width: 500px;
+    height: 300px;
     background-color: #197278;
-    border-radius: 7px;
+    border-radius: 15px;
     margin: auto;
     margin-top: 10%;
     box-shadow: #1b2432 0px 0px 40px 0px;
@@ -31,14 +31,15 @@ h1{
 /*Entrada de texto | Text input*/
 .container-div__input-entry{
     position: absolute;
-    width: 250px;
-    height: 25px;
+    width: 400px;
+    height: 40px;
+    left: 50px;
+    font-size: 25px;
     background-color: #114f53;
     color:  #EDDDD4;
     border: none;
-    left: 25px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .container-div__input-entry:focus {
     outline: none;
@@ -48,24 +49,25 @@ h1{
 /*Salida de texto | Text output*/
 #container-div__input-cipher{
     position: absolute;
-    width: 250px;
-    height: 25px;
+    width: 400px;
+    height: 40px;
+    left: 50px;
+    top: 120px;
+    font-size: 25px;
     background-color: #114f53;
     color:  #EDDDD4;
     border: none;
-    left: 25px;
-    top: 85px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /*Contenedor del rango | Range container*/
 .container-div__div {
     position: absolute;
-    width: 250px;
-    height: 25px;
-    left: 25px;
-    top: 110px;
+    width: 400px;
+    height: 40px;
+    left: 50px;
+    top: 160px;
     border: none;
     display: flex;
     gap: 1.5rem;
@@ -75,39 +77,41 @@ h1{
 /*Rango | Range */
 .container-div__div-input{
     -webkit-appearance: none;
-    width: 200px;
-    height: 10px;
-    border-radius: 5px;
+    width: 300px;
+    height: 20px;
+    border-radius: 15px;
     background: #114f53;
 }
 .container-div__div-input::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 7px;
-    height: 7px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #EDDDD4;
     cursor: pointer;
 }
 .container-div__div-input::-webkit-slider-thumb:hover {
-    box-shadow: 0px 0px 0px 8px rgba(237, 221, 212, 0.16);
+    box-shadow: 0px 0px 0px 15px rgba(237, 221, 212, 0.16);
     transition: 0.3s ease-in-out;
 }
 
 /*Texto del rango | Range text*/
 #container-div__div-text {
-    height: 20px;
-    width: 20px;
-    font-weight: 600;
+    height: 40px;
+    width: 40px;
+    font-weight: 800;
+    font-size: 20px;
     color:  #EDDDD4;
 }
 
 /*Boton cifrar | Cipher button*/
 .container-div__button-cipher{
     position: absolute;
-    width: 80px;
-    height: 25px;
-    left: 100px;
-    top: 150px;
+    width: 150px;
+    height: 50px;
+    left: 175px;
+    top: 225px;
+    font-size: 20px;
     text-transform: uppercase;
     color: #EDDDD4;
     padding: 5px 10px;
