@@ -1,12 +1,14 @@
 //funcion para actualizar el valor del input range | function to update the value of the range input
 function updatenumbers(value) {
     document.getElementById('container-div__div-text').innerHTML = value;
+}
+function updatenumbers2(value) {
     document.getElementById('container-div__div-text2').innerHTML = value;
 }
 
 //funcion para actualizar el valor del input text | function to update the value of the text input
 function updatetext(value){
-    let text = " ";
+    let text = "";
     let i=0;
     let i2=0;
     if (value == "Texto a Cifrar" && i==0) {
@@ -41,7 +43,7 @@ function cipher(){
                    "j", "k", "l", "m", "n", "ñ", "o", "p", "q", 
                    "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-    let textCipher = [];
+    let text_cipher = [];
     
     //Obtener el texto y el numero de desplazamiento | Get the text and the number of displacement
     let text = document.getElementsByClassName('container-div__input-entry')[0].value.toLowerCase();
@@ -61,24 +63,24 @@ function cipher(){
 
             //Si el caracter es un espacio, lo agrega al array | If the character is a space, it adds it to the array
             if(array_text[i] == " ") {
-                textCipher.push(" ");
+                text_cipher.push(" ");
             }
             //Si el caracter es un numero, lo agrega al array | If the character is a number, it adds it to the array
             else if (isNaN(array_text[i]) == false) {
-                textCipher.push(array_text[i]);
+                text_cipher.push(array_text[i]);
             }
             else {
                 //Obtener la posicion de la letra en el array | Get the position of the letter in the array
                 let position = letters.indexOf(array_text[i]);
                 //Obtener la nueva posicion de la letra | Get the new position of the letter
-                let newPosition = (position + number) % 27;
+                let new_position = (position + number) % 27;
                 //Agregar la letra cifrada al array | Add the encrypted letter to the array
-                textCipher.push(letters[newPosition]);
+                text_cipher.push(letters[new_position]);
             }
         } 
     }
     //Mostrar el texto cifrado | Show the encrypted text
-    document.getElementById('container-div__input-cipher').value = textCipher.join("");
+    document.getElementById('container-div__input-cipher').value = text_cipher.join("");
 }
 
 //funcion para descifrar el texto | function to decrypt the text
@@ -88,7 +90,7 @@ function decipher(){
                    "j", "k", "l", "m", "n", "ñ", "o", "p", "q", 
                    "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-    let textCipher = [];
+    let text_decipher = [];
 
     //Obtener el texto y el numero de desplazamiento | Get the text and the number of displacement
     let text = document.getElementsByClassName('container-div__input-entry')[1].value.toLowerCase();
@@ -108,22 +110,22 @@ function decipher(){
 
             //Si el caracter es un espacio, lo agrega al array | If the character is a space, it adds it to the array
             if(array_text[i] == " ") {
-                textCipher.push(" ");
+                text_decipher.push(" ");
             }
             //Si el caracter es un numero, lo agrega al array | If the character is a number, it adds it to the array
             else if (isNaN(array_text[i]) == false) {
-                textCipher.push(array_text[i]);
+                text_decipher.push(array_text[i]);
             }
             else{
                 //Obtener la posicion de la letra en el array | Get the position of the letter in the array
                 let position = letters.indexOf(array_text[i]);
                 //Obtener la nueva posicion de la letra | Get the new position of the letter
-                let newPosition = (position - number) % 27;
+                let new_position = (position - number + 27) % 27;
                 //Agregar la letra cifrada al array | Add the encrypted letter to the array
-                textCipher.push(letters[newPosition]);
+                text_decipher.push(letters[new_position]);
             }
         } 
     }
-    //Mostrar el texto cifrado | Show the encrypted text
-    document.getElementById('container-div__input-decipher').value = textCipher.join("");
+    //Mostrar el texto decifrado | Show the decrypted text
+    document.getElementById('container-div__input-decipher').value = text_decipher.join("");
 }

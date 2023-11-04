@@ -14,7 +14,7 @@
         <!--Enklazar Google Fonts | Link Google Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Geologica&family=Montserrat:wght@600&family=Pixelify+Sans&family=Roboto:wght@100&display=swap" rel="stylesheet" />
 
-        <!--Contenedor principal | Main container-->
+        <!--Contenedor principal para cifrar | Main container to cipher-->
         <div class="container-div" id="container-div-cipher">
             <!--Titulo | Title-->
             <h1>Cifrado Cesar</h1>
@@ -26,7 +26,7 @@
             <div class="container-div__div">
                 <input type="range" min="1" max="26" value="13" class="container-div__div-input" oninput="updatenumbers(this.value)">
                 <!--Valor del rango | Range value-->
-                <p id="container-div__div-text">26</p>
+                <p id="container-div__div-text">13</p>
             </div>
             <!--Boton de cifrado | Cipher button-->
             <button type="button" class="container-div__button-cipher" onclick="cipher()">Cifrar</button>
@@ -34,7 +34,7 @@
             <button type="button" class="container-div__button-change1" onclick="change1()">Descifrar ⇨</button>
         </div>
 
-        <!--Contenedor principal | Main container-->
+        <!--Contenedor principal para descifrar | Main container to decipher-->
         <div class="container-div" id="container-div-decipher" style="display: none;">
             <!--Titulo | Title-->
             <h1>Decifrador Cesar</h1>
@@ -44,14 +44,14 @@
             <input type="text" id="container-div__input-decipher" disabled />
             <!--Contenedor de rango | Range container-->
             <div class="container-div__div">
-                <input type="range" min="1" max="26" value="13" class="container-div__div-input" oninput="updatenumbers(this.value)">
+                <input type="range" min="1" max="26" value="13" class="container-div__div-input" oninput="updatenumbers2(this.value)">
                 <!--Valor del rango | Range value-->
-                <p id="container-div__div-text2">26</p>
+                <p id="container-div__div-text2">13</p>
             </div>
             <!--Boton de cifrado | Cipher button-->
-            <button type="button" class="container-div__button-cipher" onclick="decipher()">Descifrar</button>
+            <button type="button" class="container-div__button-decipher" onclick="decipher()">Descifrar</button>
 
-            <button type="button" class="container-div__button-change1" onclick="change2()"> ⇦ Cifrar</button>
+            <button type="button" class="container-div__button-change2" onclick="change2()"> ⇦ Cifrar</button>
         </div>
 
         <!--Enlazar html con JS | Link html with JS-->

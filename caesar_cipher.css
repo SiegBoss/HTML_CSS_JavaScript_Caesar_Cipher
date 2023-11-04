@@ -103,7 +103,7 @@ h1{
 }
 
 /*Boton cifrar y descifrar | Cipher and decipher button*/
-.container-div__button-cipher{
+.container-div__button-cipher, .container-div__button-decipher{
     position: absolute;
     width: 150px;
     height: 50px;
@@ -125,7 +125,7 @@ h1{
 }
 
 /*Boton para cambiar de cifrar a descifrar y de descifrar a cifrar | Button to change from cipher to decipher and from decipher to cipher*/
-.container-div__button-change1{
+.container-div__button-change1, .container-div__button-change2{
     position: absolute;
     width: 170px;
     height: 50px;
