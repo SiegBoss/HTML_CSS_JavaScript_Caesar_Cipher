@@ -16,7 +16,7 @@ h1{
     align-items: center;
 }
 
-/*Contenedor de los botones | Container of the buttons*/
+/*Contenedores | Containers*/
 .container-div{
     width: 500px;
     height: 300px;
@@ -47,7 +47,7 @@ h1{
 }
 
 /*Salida de texto | Text output*/
-#container-div__input-cipher{
+#container-div__input-cipher, #container-div__input-decipher{
     position: absolute;
     width: 400px;
     height: 40px;
@@ -61,7 +61,7 @@ h1{
     border-bottom-right-radius: 15px;
 }
 
-/*Contenedor del rango | Range container*/
+/*Contenedor rango | Range container*/
 .container-div__div {
     position: absolute;
     width: 400px;
@@ -73,8 +73,6 @@ h1{
     gap: 1.5rem;
     padding: 1rem;
 }
-  
-/*Rango | Range */
 .container-div__div-input{
     -webkit-appearance: none;
     width: 300px;
@@ -96,7 +94,7 @@ h1{
 }
 
 /*Texto del rango | Range text*/
-#container-div__div-text {
+#container-div__div-text, #container-div__div-text2 {
     height: 40px;
     width: 40px;
     font-weight: 800;
@@ -104,7 +102,7 @@ h1{
     color:  #EDDDD4;
 }
 
-/*Boton cifrar | Cipher button*/
+/*Boton cifrar y descifrar | Cipher and decipher button*/
 .container-div__button-cipher{
     position: absolute;
     width: 150px;
@@ -124,4 +122,46 @@ h1{
 .container-div__button-cipher:active {
     box-shadow: none;
     transform: translate(3px, 3px);
+}
+
+/*Boton para cambiar de cifrar a descifrar y de descifrar a cifrar | Button to change from cipher to decipher and from decipher to cipher*/
+.container-div__button-change1{
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    left: 165px;
+    top: 350px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #EDDDD4;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 2px solid #EDDDD4;
+    background: #81B29A;
+    box-shadow: 3px 3px #EDDDD4;
+    cursor: pointer;
+}
+.container-div__button-cipher:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+/*Animacion para mover a la izquierda | Animation to move to the left*/
+@keyframes moveleft {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
+}
+.move-left {
+    animation-name: moveleft;
+    animation-duration: 1s;
+}
+
+/*Animacion para mover a la derecha | Animation to move to the right*/
+@keyframes moveright {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0);}
+}
+.move-right {
+    animation-name: moveright;
+    animation-duration: 1s;
 }
