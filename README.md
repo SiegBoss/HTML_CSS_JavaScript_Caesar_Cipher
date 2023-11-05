@@ -17,7 +17,7 @@ Permite a los usuarios cifrar y descifrar mensajes, eligiendo cuántos lugares s
 
 ## Demostración
 
-Puedes ver una demostración de la calculadora en funcionamiento en el siguiente enlace: 
+Puedes ver una demostración del Cifrado César en funcionamiento en el siguiente enlace: 
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
 
@@ -42,6 +42,6 @@ It allows users to encrypt and decrypt messages, choosing how many places the ch
 
 ## Demo
 
-You can see a demonstration of the calculator in operation at the following link:
+You can see a demonstration of the Caesar Cipher in operation at the following link:
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
