@@ -6,8 +6,8 @@ Permite a los usuarios cifrar y descifrar mensajes, eligiendo cuántos lugares s
 
 ## Funcionalidades
 
-1. **Cifrado**: Introduce un mensaje y el número de lugares que deseas desplazar los caracteres para cifrar tu mensaje.
-2. **Descifrado**: Introduce un mensaje cifrado y el número de lugares que se desplazaron los caracteres para descifrar el mensaje.
+1. `Cifrado`: Introduce un mensaje y el número de lugares que deseas desplazar los caracteres para cifrar tu mensaje.
+2. `Descifrado`: Introduce un mensaje cifrado y el número de lugares que se desplazaron los caracteres para descifrar el mensaje.
 
 ## Herramientas de Desarrollo
 
@@ -31,8 +31,8 @@ It allows users to encrypt and decrypt messages, choosing how many places the ch
 
 ## Characteristics
 
-1. **Encryption** - Enter a message and the number of places you want to move characters to encrypt your message.
-2. **Decrypted** - Enter an encrypted message and the number of places characters were moved to decrypt the message.
+1. `Encryption` - Enter a message and the number of places you want to move characters to encrypt your message.
+2. `Decrypted` - Enter an encrypted message and the number of places characters were moved to decrypt the message.
 
 ## Development tools
 
