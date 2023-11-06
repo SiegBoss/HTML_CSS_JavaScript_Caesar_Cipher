@@ -34,7 +34,7 @@ It allows users to encrypt and decrypt messages, choosing how many places the ch
 1. **Encryption** - Enter a message and the number of places you want to move characters to encrypt your message.
 2. **Decrypted** - Enter an encrypted message and the number of places characters were moved to decrypt the message.
 
-## Development tools+
+## Development tools
 
 - HTML
 - CSS
