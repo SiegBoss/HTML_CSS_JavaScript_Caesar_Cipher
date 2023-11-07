@@ -21,6 +21,10 @@ Puedes ver una demostración del `Cifrado César` en funcionamiento en el siguie
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
 
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
+
 ------------------------------
 
 # Caesar Cipher in HTML, CSS and JavaScript
@@ -45,3 +49,7 @@ It allows users to encrypt and decrypt messages, choosing how many places the ch
 You can see a demonstration of the `Caesar Cipher` in operation at the following link:
 
 https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
+
+## License
+
+This project is under the MIT license. Check the `LICENSE` file for more details.
