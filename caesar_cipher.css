@@ -16,9 +16,9 @@ h1{
     align-items: center;
 }
 
+/*Contenedores | Containers*/
 .container-div{
-    width: 80%;
-    max-width: 500px;
+    width: 500px;
     height: 300px;
     background-color: #197278;
     border-radius: 15px;
@@ -31,9 +31,9 @@ h1{
 /*Entrada de texto | Text input*/
 .container-div__input-entry{
     position: absolute;
-    width: 80%;
-    left: 10%;
+    width: 400px;
     height: 40px;
+    left: 50px;
     font-size: 25px;
     background-color: #114f53;
     color:  #EDDDD4;
@@ -49,9 +49,9 @@ h1{
 /*Salida de texto | Text output*/
 #container-div__input-cipher, #container-div__input-decipher{
     position: absolute;
-    width: 80%;
-    left: 10%;
+    width: 400px;
     height: 40px;
+    left: 50px;
     top: 120px;
     font-size: 25px;
     background-color: #114f53;
@@ -64,9 +64,9 @@ h1{
 /*Contenedor rango | Range container*/
 .container-div__div {
     position: absolute;
-    width: 80%;
-    left: 10%;
+    width: 400px;
     height: 40px;
+    left: 50px;
     top: 160px;
     border: none;
     display: flex;
@@ -75,7 +75,7 @@ h1{
 }
 .container-div__div-input{
     -webkit-appearance: none;
-    width: 75%;
+    width: 300px;
     height: 20px;
     border-radius: 15px;
     background: #114f53;
@@ -105,9 +105,9 @@ h1{
 /*Boton cifrar y descifrar | Cipher and decipher button*/
 .container-div__button-cipher, .container-div__button-decipher{
     position: absolute;
-    width: 30%;
-    left: 35%;
+    width: 150px;
     height: 50px;
+    left: 175px;
     top: 225px;
     font-size: 20px;
     text-transform: uppercase;
@@ -127,9 +127,9 @@ h1{
 /*Boton para cambiar de cifrar a descifrar y de descifrar a cifrar | Button to change from cipher to decipher and from decipher to cipher*/
 .container-div__button-change1, .container-div__button-change2{
     position: absolute;
-    width: 34%;
-    left: 33%;
+    width: 170px;
     height: 50px;
+    left: 165px;
     top: 350px;
     font-size: 20px;
     text-transform: uppercase;
@@ -164,25 +164,4 @@ h1{
 .move-right {
     animation-name: moveright;
     animation-duration: 1s;
-}
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 600px) {
-    .container-div{
-        width: 90%;
-    }
-    .container-div__input-entry,
-    #container-div__input-cipher, 
-    #container-div__input-decipher,
-    .container-div__div {
-        width: 90%;
-        left: 5%;
-    }
-    .container-div__button-cipher, 
-    .container-div__button-decipher,
-    .container-div__button-change1, 
-    .container-div__button-change2 {
-        width: 50%;
-        left: 25%;
-    }
 }
