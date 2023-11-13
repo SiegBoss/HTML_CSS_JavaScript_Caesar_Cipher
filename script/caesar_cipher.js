@@ -1,38 +1,23 @@
 //funcion para actualizar el valor del input range | function to update the value of the range input
 function updatenumbers(value) {
-    document.getElementById('container-div__div-text').innerHTML = value;
+    document.getElementById('shift-value-cipher').innerHTML = value;
 }
 function updatenumbers2(value) {
-    document.getElementById('container-div__div-text2').innerHTML = value;
-}
-
-//funcion para actualizar el valor del input text | function to update the value of the text input
-function updatetext(value){
-    let text = "";
-    let i=0;
-    let i2=0;
-    if (value == "Texto a Cifrar" && i==0) {
-        document.getElementsByClassName('container-div__input-entry')[0].value = text;
-        i++;
-    }
-    if (value == "Texto a Descifrar" && i2==0) {
-        document.getElementsByClassName('container-div__input-entry')[1].value = text;
-        i2++;
-    }
+    document.getElementById('shift-value-decipher').innerHTML = value;
 }
 
 //funcion para ocultar el div de cifrado | function to hide the cipher div
 function change1(){
-    document.getElementById("container-div-cipher").style.display = "none";
-    document.getElementById("container-div-decipher").style.display = "block";
-    document.getElementById("container-div-decipher").classList.add("move-left");
+    document.getElementById("cipher-container").style.display = "none";
+    document.getElementById("decipher-container").style.display = "block";
+    document.getElementById("decipher-container").classList.add("move-left");
 }
 
 //funcion para ocultar el div de descifrado | function to hide the decipher div.
 function change2(){
-    document.getElementById("container-div-cipher").style.display = "block";
-    document.getElementById("container-div-decipher").style.display = "none";
-    document.getElementById("container-div-cipher").classList.add("move-right");
+    document.getElementById("cipher-container").style.display = "block";
+    document.getElementById("decipher-container").style.display = "none";
+    document.getElementById("cipher-container").classList.add("move-right");
 }   
 
 //funcion para cifrar el texto | function to encrypt the text
@@ -46,8 +31,8 @@ function cipher(){
     let text_cipher = [];
     
     //Obtener el texto y el numero de desplazamiento | Get the text and the number of displacement
-    let text = document.getElementsByClassName('container-div__input-entry')[0].value.toLowerCase();
-    let number = parseInt(document.getElementsByClassName('container-div__div-input')[0].value);
+    let text = document.getElementById('input-cipher').value.toLowerCase();
+    let number = parseInt(document.getElementById('range-cipher').value);
 
     //Si el texto esta vacio, muestra un mensaje | If the text is empty, show a message
     if(text == "") {
@@ -80,7 +65,7 @@ function cipher(){
         } 
     }
     //Mostrar el texto cifrado | Show the encrypted text
-    document.getElementById('container-div__input-cipher').value = text_cipher.join("");
+    document.getElementById('output-cipher').value = text_cipher.join("");
 }
 
 //funcion para descifrar el texto | function to decrypt the text
@@ -93,8 +78,8 @@ function decipher(){
     let text_decipher = [];
 
     //Obtener el texto y el numero de desplazamiento | Get the text and the number of displacement
-    let text = document.getElementsByClassName('container-div__input-entry')[1].value.toLowerCase();
-    let number = parseInt(document.getElementsByClassName('container-div__div-input')[1].value);
+    let text = document.getElementById('input-decipher').value.toLowerCase();
+    let number = parseInt(document.getElementById('range-decipher').value);
 
     //Si el texto esta vacio, muestra un mensaje | If the text is empty, show a message
     if(text == "") {
@@ -127,5 +112,5 @@ function decipher(){
         } 
     }
     //Mostrar el texto decifrado | Show the decrypted text
-    document.getElementById('container-div__input-decipher').value = text_decipher.join("");
+    document.getElementById('output-decipher').value = text_decipher.join("");
 }
