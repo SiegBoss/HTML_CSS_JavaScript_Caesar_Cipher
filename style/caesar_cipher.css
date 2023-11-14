@@ -205,11 +205,6 @@ footer{
   transition: all 0.2s ease-in;
 }
 
-.social-media-icons a:hover{
-  background-color: white;
-  border: 2px solid rgb(13, 110,253);
-}
-
 .social-media-icons a:hover i{
   color: black;
 }
