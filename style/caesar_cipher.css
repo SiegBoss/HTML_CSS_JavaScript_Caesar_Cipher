@@ -1,216 +1,217 @@
 /*Estilos Generales | General Styles*/
 body {
-  background-color: #3D405B;
-  font-family: monospace;
-  
+    background-color: #3D405B;
+    font-family: monospace;
+
 }
 
 h1 {
-  color: #EDDDD4;
-  font-size: 40px;
-  text-transform: uppercase;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    color: #EDDDD4;
+    font-size: 40px;
+    text-transform: uppercase;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Contenedor principal para Cifrar y Decifrar | Main container for Cipher and Decipher*/
 
 /*Contenedor Pincipal | Main Container*/
-.container{
-  position: relative;
-  background-color: #197278;
-  box-shadow: black 0px 0px 20px 0px;
-  width: 550px;
-  height: 350px;
-  border-radius: 5px;
-  transition: all 0.2s ease-in;
+.container {
+    position: relative;
+    background-color: #197278;
+    box-shadow: black 0px 0px 20px 0px;
+    width: 550px;
+    height: 350px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
 }
 
 /*Entrata y salida de texto | Text input and output*/
-.input-group{
-  width: 80%;
-  height: 25%;
-  margin: auto;
+.input-group {
+    width: 80%;
+    height: 25%;
+    margin: auto;
 }
 
 /*Entrada de texto | Text input*/
-.form-control-intput{
-  width: 100%;
-  height: 40%;
-  font-size: 25px;
-  background-color: #114f53;
-  color: #EDDDD4;
-  border: none;
+.form-control-intput {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+    background-color: #114f53;
+    color: #EDDDD4;
+    border: none;
 }
 
 /*Salida de texto | Text output*/
-.form-control-output{
-  width: 100%;
-  height: 40%;
-  font-size: 25px;
-  background-color: #EDDDD4;
-  color: #114f53;
-  border: none;
+.form-control-output {
+    width: 100%;
+    height: 40%;
+    font-size: 25px;
+    background-color: #EDDDD4;
+    color: #114f53;
+    border: none;
 }
 
 /*Texto del rango | Range text*/
-.shift-value{
-  width: 20%;
-  font-size: 20px;
-  color: #EDDDD4;
+.shift-value {
+    width: 20%;
+    font-size: 20px;
+    color: #EDDDD4;
 }
 
 /*Rango | Range*/
-.slider-container{
-  width: 80%;
-  height: 5%;
-  margin: auto;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.slider-container {
+    width: 80%;
+    height: 5%;
+    margin: auto;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.form-range{
-  width: 300px;
+
+.form-range {
+    width: 300px;
 }
 
 .form-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
-  background-color: #EDDDD4;
-  cursor: pointer;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #EDDDD4;
+    cursor: pointer;
 }
 
 .form-range::-webkit-slider-thumb:hover {
-  box-shadow: 0px 0px 0px 15px rgba(237, 221, 212, 0.16);
-  transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 0px 15px rgba(237, 221, 212, 0.16);
+    transition: 0.3s ease-in-out;
 }
 
 /*Botones | Buttons*/
-.btn{
-  width: 170px;
-  height: 40px;
-  font-size: 15px;
-  text-transform: uppercase;
-  color: #EDDDD4;
-  border: 2px solid #EDDDD4;
-  box-shadow: 3px 3px #EDDDD4;
-  cursor: pointer;
-  margin: auto;
+.btn {
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #EDDDD4;
+    border: 2px solid #EDDDD4;
+    box-shadow: 3px 3px #EDDDD4;
+    cursor: pointer;
+    margin: auto;
 }
 
 .btn:active {
-  box-shadow: none;
-  transform: translate(3px, 3px);
+    box-shadow: none;
+    transform: translate(3px, 3px);
 }
 
-#cipher-button{
-  background-color: #E07A5F;
+#cipher-button {
+    background-color: #E07A5F;
 }
 
-#change-button{
-  background-color: #81B29A;
+#change-button {
+    background-color: #81B29A;
 }
 
-#decipher-container{
-  display: none;
+#decipher-container {
+    display: none;
 }
 
 /*Responsive*/
 @media screen and (max-width: 600px) {
-  .container{
-    width: 100%;
-    height: 400px;
-  }
+    .container {
+        width: 100%;
+        height: 400px;
+    }
 }
 
 /*Animacion */
 @keyframes moveleft {
-  from {
-      transform: translateX(50%);
-  }
+    from {
+        transform: translateX(50%);
+    }
 
-  to {
-      transform: translateX(0);
-  }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .move-left {
-  animation-name: moveleft;
-  animation-duration: 1s;
+    animation-name: moveleft;
+    animation-duration: 1s;
 }
 
 @keyframes moveright {
-  from {
-      transform: translateX(-50%);
-  }
+    from {
+        transform: translateX(-50%);
+    }
 
-  to {
-      transform: translateX(0);
-  }
+    to {
+        transform: translateX(0);
+    }
 }
 
 .move-right {
-  animation-name: moveright;
-  animation-duration: 1s;
+    animation-name: moveright;
+    animation-duration: 1s;
 }
 
 
 /*Pie de pagina | Footer*/
-.dark-section{
-  color: #f5f6f7;
-  background-color: #1b1b32;
+.dark-section {
+    color: #f5f6f7;
+    background-color: #1b1b32;
 }
 
-footer{
-  min-height: 400px;
+footer {
+    min-height: 400px;
 }
 
-.footer-page{
-  margin-top: 200px;
+.footer-page {
+    margin-top: 200px;
 }
 
-.footer-icon{
-  height: 80px;
-  width: 80px;
-  margin: 10px;
+.footer-icon {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
 }
 
-.footer-text{
-  font-size: 1.5rem;
-  padding: 20px;
-  margin-bottom: 30px;
-  font-family: 'Quicksand', sans-serif;
+.footer-text {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.social-media-icons a{
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  margin: 10px;
-  border: 2px solid white;
-  border-radius: 50%;
-  transition: all 0.2s ease-in;
+.social-media-icons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
 }
 
-.social-media-icons i{
-  color: white;
-  font-size: 1.5rem;
-  transition: all 0.2s ease-in;
+.social-media-icons i {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
 }
 
-.social-media-icons a:hover i{
-  color: black;
+.social-media-icons a:hover i {
+    color: black;
 }
 
-.Copyright{
-  font-size: 15px;
-  color: #aeaeae;
-  padding: 20px;
+.Copyright {
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
 }
