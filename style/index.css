@@ -1,59 +1,64 @@
 /*Estilos Generales | General Styles*/
 body {
+    font-family: 'Montserrat', sans-serif;
     background-color: #3D405B;
-    font-family: monospace;
-
 }
 
 h1 {
-    color: #EDDDD4;
     font-size: 40px;
     text-transform: uppercase;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #EDDDD4;
 }
 
-/*Contenedor principal para Cifrar y Decifrar | Main container for Cipher and Decipher*/
 
 /*Contenedor Pincipal | Main Container*/
 .container {
-    position: relative;
-    background-color: #197278;
-    box-shadow: black 0px 0px 20px 0px;
+    position: relative;   
     width: 550px;
     height: 350px;
-    border-radius: 5px;
+    border-radius: 15px;
+    background-color: #197278;
+    box-shadow: black 0px 0px 20px 0px;
     transition: all 0.2s ease-in;
 }
 
+
 /*Entrata y salida de texto | Text input and output*/
-.input-group {
+.cipher-input-output,.decipher-input-output {
     width: 80%;
     height: 25%;
     margin: auto;
 }
 
+
 /*Entrada de texto | Text input*/
 .form-control-intput {
     width: 100%;
-    height: 40%;
+    height: 50%;
     font-size: 25px;
+    border: none;
+    border-radius: 15px 15px 0 0;  
     background-color: #114f53;
     color: #EDDDD4;
-    border: none;
 }
+
 
 /*Salida de texto | Text output*/
 .form-control-output {
     width: 100%;
-    height: 40%;
+    height: 50%;
     font-size: 25px;
+    border: none;
+    border-radius:  0 0 15px 15px;
     background-color: #EDDDD4;
     color: #114f53;
-    border: none;
+  
 }
+
 
 /*Texto del rango | Range text*/
 .shift-value {
@@ -61,6 +66,7 @@ h1 {
     font-size: 20px;
     color: #EDDDD4;
 }
+
 
 /*Rango | Range*/
 .slider-container {
@@ -90,17 +96,18 @@ h1 {
     transition: 0.3s ease-in-out;
 }
 
+
 /*Botones | Buttons*/
 .btn {
-    width: 170px;
-    height: 40px;
     font-size: 15px;
     text-transform: uppercase;
+    width: 170px;
+    height: 40px;
+    cursor: pointer;
+    margin: auto;
     color: #EDDDD4;
     border: 2px solid #EDDDD4;
     box-shadow: 3px 3px #EDDDD4;
-    cursor: pointer;
-    margin: auto;
 }
 
 .btn:active {
