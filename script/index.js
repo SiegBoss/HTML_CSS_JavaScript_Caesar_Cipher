@@ -1,3 +1,6 @@
+const containerCipher = document.getElementById("cipher-container");
+const containerDecipher = document.getElementById("decipher-container");
+
 //Funcion para actualizar el valor del input range | Function to update the value of the range input
 function updateNumbers(value) {
 
@@ -15,20 +18,21 @@ function updateNumbers2(value) {
 //Funcion para ocultar el div de cifrado | Function to hide the cipher div
 function change1() {
 
-    document.getElementById("cipher-container").style.display = "none";
-    document.getElementById("decipher-container").style.display = "block";
-    document.getElementById("decipher-container").classList.add("move-left");
+    containerCipher.style.display = "none";
+    containerDecipher.style.display = "block";
+    containerDecipher.classList.add("move-left");
 }
 
 
 //funcion para ocultar el div de descifrado | function to hide the decipher div.
 function change2() {
 
-    document.getElementById("cipher-container").style.display = "block";
-    document.getElementById("decipher-container").style.display = "none";
-    document.getElementById("cipher-container").classList.add("move-right");
+    containerCipher.style.display = "block";
+    containerDecipher.style.display = "none";
+    containerCipher.classList.add("move-right");
 
 }
+
 
 //Funcion para cifrar el texto | Function to encrypt the text
 function cipher() {
@@ -88,6 +92,7 @@ function cipher() {
     document.getElementById('output-cipher').value = textCipher.join("");
 }
 
+
 //funcion para descifrar el texto | function to decrypt the text
 function decipher() {
 
@@ -141,6 +146,7 @@ function decipher() {
             }
         }
     }
+    
     
     //Mostrar el texto decifrado | Show the decrypted text
     document.getElementById('output-decipher').value = textDecipher.join("");

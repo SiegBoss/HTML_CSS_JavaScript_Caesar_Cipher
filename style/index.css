@@ -15,10 +15,10 @@ h1 {
     color: #EDDDD4;
 }
 
-
+/*---------------------------*/
 /*Contenedor Pincipal | Main Container*/
 .container {
-    position: relative;   
+    position: relative;
     width: 550px;
     height: 350px;
     border-radius: 15px;
@@ -27,49 +27,40 @@ h1 {
     transition: all 0.2s ease-in;
 }
 
-
-/*Entrata y salida de texto | Text input and output*/
-.cipher-input-output,.decipher-input-output {
+.cipher-input-output,
+.decipher-input-output {
     width: 80%;
     height: 25%;
     margin: auto;
 }
 
-
-/*Entrada de texto | Text input*/
 .form-control-intput {
     width: 100%;
     height: 50%;
     font-size: 25px;
     border: none;
-    border-radius: 15px 15px 0 0;  
+    border-radius: 15px 15px 0 0;
     background-color: #114f53;
     color: #EDDDD4;
 }
 
-
-/*Salida de texto | Text output*/
 .form-control-output {
     width: 100%;
     height: 50%;
     font-size: 25px;
     border: none;
-    border-radius:  0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
     background-color: #EDDDD4;
     color: #114f53;
-  
+
 }
 
-
-/*Texto del rango | Range text*/
 .shift-value {
     width: 20%;
     font-size: 20px;
     color: #EDDDD4;
 }
 
-
-/*Rango | Range*/
 .slider-container {
     width: 80%;
     height: 5%;
@@ -97,8 +88,6 @@ h1 {
     transition: 0.3s ease-in-out;
 }
 
-
-/*Botones | Buttons*/
 .btn {
     font-size: 15px;
     text-transform: uppercase;
@@ -128,6 +117,8 @@ h1 {
     display: none;
 }
 
+
+/*---------------------------*/
 /*Responsive*/
 @media screen and (max-width: 600px) {
     .container {
@@ -136,6 +127,8 @@ h1 {
     }
 }
 
+
+/*---------------------------*/
 /*Animacion */
 @keyframes moveleft {
     from {
@@ -168,34 +161,33 @@ h1 {
 }
 
 
+/*---------------------------*/
 /*Pie de pagina | Footer*/
-.dark-section {
-    color: #f5f6f7;
-    background-color: #1b1b32;
-}
-
 footer {
-    min-height: 400px;
-}
-
-.footer-page {
+    margin-top: 100px;
+    min-height: 500px;
     margin-top: 200px;
+    background-color: #1b1b32;
+    color: #fff;
 }
 
-.footer-icon {
+.footer_text_f {
+    font-size: 1.5rem;
+}
+
+.footer_text {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.footer_icon {
     height: 80px;
     width: 80px;
     margin: 10px;
 }
 
-.footer-text {
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-bottom: 30px;
-    font-family: 'Quicksand', sans-serif;
-}
-
-.social-media-icons a {
+.social_media_icons a {
     width: 50px;
     height: 50px;
     display: flex;
@@ -208,13 +200,18 @@ footer {
     transition: all 0.2s ease-in;
 }
 
-.social-media-icons i {
+.social_media_icons i {
     color: white;
     font-size: 1.5rem;
     transition: all 0.2s ease-in;
 }
 
-.social-media-icons a:hover i {
+.social_media_icons a:hover {
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.social_media_icons a:hover i {
     color: black;
 }
 
@@ -222,4 +219,8 @@ footer {
     font-size: 15px;
     color: #aeaeae;
     padding: 20px;
+}
+
+.contact button:hover i {
+    color: black;
 }
