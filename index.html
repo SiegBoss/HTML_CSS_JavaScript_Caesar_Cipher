@@ -1,131 +1,61 @@
 <!-- Cifrado Cesar | Cesar Cipher -->
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <!--Metadatos | Metadata-->
     <meta charset="utf-8" />
     <meta name="author" content="SiegBoss" />
     <meta name="description" content="Portafolio de SiegBoss" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--Titulo | Title-->
     <title>Cifrado Cesar</title>
-    <!--Icono | Icon-->
     <link rel="icon" type="image/x-icon" href="./images/logo_willy.png" />
-    <!-- Enlazar a Bootstrap | Link to Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-    <!--Enklazar CSS Estilo | Link CSS Style-->
     <link rel="stylesheet" type="text/css" href="./style/index.css" />
-    <!--Tipografias | Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!---------------------->
-    <!--Contenedor principal para cifrar | Main container to cipher-->
-    <Section>
-        <!-- Contenedor principal para Cifrar | Main container to cipher -->
-        <!--container : Es una clase que centra y ajusta horizontalmente el contenido | It is a class that centers and horizontally adjusts the content-->
-        <!--mt-5 : sirve para darle margien-top de 5 | It is used to give it a margin-top of 5-->
-        <div class="container mt-5" id="cipher-container">
-            <!-- Título | Title -->
-            <!--text-center : sirve para centrar el texto | It is used to center the text-->
-            <h1 class="text-center">Cifrador Cesar</h1>
-            <div class="cipher-input-output">
-                <!-- Entrada de texto -->
-                <input type="text" class="form-control-intput" id="input-cipher" placeholder="Texto a Cifrar" />
-                <!-- Salida de texto | Output text -->
-                <input type="text" class="form-control-output" id="output-cipher" placeholder="Texto Cifrado" disabled>
-            </div>
-            <!-- slider -->
-            <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-            <div class="slider-container mt-3">
-                <input type="range" class="form-range" min="1" max="26" value="13" id="range-cipher" oninput="updateNumbers(this.value)">
-                <!-- Valor del desplazamiento -->
-                <!-- text-center : sirve para centrar el texto | It is used to center the text -->
-                <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-                <p id="shift-value-cipher" class="shift-value text-center mt-3">13</p>
-            </div>
-            <!-- Botónes | Buttons -->
-            <!-- d-grid : sirve para crear un diseño de cuadrícula | It is used to create a grid layout -->
-            <!-- gap-2 : sirve para darle un espacio entre los botones | It is used to give a space between the buttons -->
-            <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-            <div class="d-grid gap-2 mt-3">
-                <!-- btn : sirve para darle un estilo de botón | It is used to give it a button style -->
-                <button type="button" class="btn" id="cipher-button" onclick="cipher()">Cifrar</button>
-                <!-- <i class="bi bi-arrow-return-left"> es un icono de flecha | is an arrow icon -->
-                <button type="button" class="btn" id="change-button" onclick="change1()">Descifrar <i class="bi bi-arrow-return-right"></i></button>
-            </div>
-        </div>
-        <!--Contenedor principal para Decifrar | Main container to decipher-->
-        <!-- mt-5 : sirve para darle margien-top de 5 | It is used to give it a margin-top of 5 -->
-        <div class="container mt-5" id="decipher-container">
-            <!-- Título | Title -->
-            <!-- text-center : sirve para centrar el texto | It is used to center the text -->
-            <h1 class="text-center">Decifrador Cesar</h1>
-            <div class="decipher-input-output">
-                <!-- Entrada de texto -->
-                <input type="text" class="form-control-intput" id="input-decipher" placeholder="Texto a Decifrar" />
-                <!-- Salida de texto | Output text -->
-                <input type="text" class="form-control-output" id="output-decipher" placeholder="Texto Decifrado" disabled>
-            </div>
-            <!-- Control deslizante para el desplazamiento | Slider for the shift -->
-            <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-            <div class="slider-container mt-3">
-                <input type="range" class="form-range" min="1" max="26" value="13" id="range-decipher"
-                    oninput="updateNumbers2(this.value)">
-                <!-- Valor del desplazamiento -->
-                <!-- text-center : sirve para centrar el texto | It is used to center the text -->
-                <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-                <p id="shift-value-decipher" class="shift-value text-center mt-3">13</p>
-            </div>
-            <!-- Botónes | Buttons -->
-            <!-- d-grid : sirve para crear un diseño de cuadrícula | It is used to create a grid layout -->
-            <!-- gap-2 : sirve para darle un espacio entre los botones | It is used to give a space between the buttons -->
-            <!-- mt-3 : sirve para darle margien-top de 3 | It is used to give it a margin-top of 3 -->
-            <div class="d-grid gap-2 mt-3">
-                <!-- btn : sirve para darle un estilo de botón | It is used to give it a button style -->
-                <button type="button" class="btn" id="cipher-button" onclick="decipher()">Decifrar</button>
-                <!-- <i class="bi bi-arrow-return-left"> es un icono de flecha | is an arrow icon -->
-                <button type="button" class="btn" id="change-button" onclick="change2()"><i class="bi bi-arrow-return-left"></i> Cifrar</button>
-            </div>
-        </div>
-    </Section>
-    <!---------------------->
+<body class="dark">
+    <div>
+        <button class="theme-toggle" onclick="toggleTheme()">☀️ Modo Claro</button>
+    </div>
 
+    <section>
 
-    <!---------------------->
-    <!--Pie de Pagina | Footer-->
-    <footer id="contacto" class="d-flex flex-column align-items-center justify-content-center">
-        <img class="footer_icon" src="./images/logo_willy.png" alt="Logo de la Pagina">
-        <p class="footer_text_f text-center">Tu versión de mañana debería poder vencer a tú versión de hoy</p>
-        <p class="footer_text text-center">Contactame</p>
-        <div class="social_media_icons d-flex flex-wrap align-items-center justify-content-center">
-            <a href="https://twitter.com/SiegBoss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-twitter-x"></i>
-            </a>
-            <a href="https://www.instagram.com/siegboss_xp/" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-instagram"></i>
-            </a>
-            <a href="https://github.com/SiegBoss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github"></i>
-            </a>
-            <a href="https://www.tiktok.com/@siegboss" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-tiktok"></i>
-            </a>
+        <!-- Contenedor del Cifrador | Container of the Cipher -->
+        <div class="card fade" id="cipher-container">
+            <h1>Cifrador Cesar</h1>
+            <div class="input-group">
+                <input type="text" id="input-cipher" placeholder="Texto a Cifrar" />
+                <input type="text" id="output-cipher" placeholder="Texto Cifrado" disabled />
+            </div>
+            <div class="slider">
+                <input type="range" min="1" max="26" value="13" id="range-cipher" oninput="updateNumbers(this.value)" />
+                <p id="shift-value-cipher">13</p>
+            </div>
+            <div class="buttons">
+                <button id="cipher-button" onclick="cipher()">Cifrar</button>
+                <button id="change-button" onclick="toggleMode('decipher')">Descifrar</button>
+            </div>
         </div>
-        <div class="Copyright">
-            creado por SiegBoss &#169; 2024
-        </div>
-    </footer>
-    <!---------------------->
 
-    <!--Enlazar html con JS | Link html with JS-->
+        <!-- Contenedor del Descifrador | Container of the Decipher -->
+        <div class="card fade hidden" id="decipher-container">
+            <h1>Decifrador Cesar</h1>
+            <div class="input-group">
+                <input type="text" id="input-decipher" placeholder="Texto a Decifrar" />
+                <input type="text" id="output-decipher" placeholder="Texto Decifrado" disabled />
+            </div>
+            <div class="slider">
+                <input type="range" min="1" max="26" value="13" id="range-decipher" oninput="updateNumbers2(this.value)" />
+                <p id="shift-value-decipher">13</p>
+            </div>
+            <div class="buttons">
+                <button id="cipher-button" onclick="decipher()">Decifrar</button>
+                <button id="change-button" onclick="toggleMode('cipher')">Cifrar</button>
+            </div>
+        </div>
+    </section>
     <script src="./script/index.js"></script>
-    <!--Enlazar a Bootstrap | Link to Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

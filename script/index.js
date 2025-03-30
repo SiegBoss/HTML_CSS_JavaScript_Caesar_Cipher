@@ -1,6 +1,35 @@
 const containerCipher = document.getElementById("cipher-container");
 const containerDecipher = document.getElementById("decipher-container");
 
+//Funcion para cambiar entre cifrado y descifrado | Function to change between cipher and decipher
+function toggleMode(mode) {
+    const cipher = document.getElementById('cipher-container');
+    const decipher = document.getElementById('decipher-container');
+
+    cipher.classList.add('fade');
+    decipher.classList.add('fade');
+
+    if (mode === 'decipher') {
+        cipher.classList.add('hidden');
+        decipher.classList.remove('hidden');
+    } else {
+        decipher.classList.add('hidden');
+        cipher.classList.remove('hidden');
+    }
+}
+
+//Funcion para cambiar el tema | Function to change the theme
+function toggleTheme() {
+    const body = document.body;
+    const button = document.querySelector('.theme-toggle');
+    body.classList.toggle('dark');
+    if (body.classList.contains('dark')) {
+        button.textContent = '☀️ Modo Claro';
+    } else {
+        button.textContent = '🌑 Modo Oscuro';
+    }
+}
+
 //Funcion para actualizar el valor del input range | Function to update the value of the range input
 function updateNumbers(value) {
 
@@ -14,7 +43,6 @@ function updateNumbers2(value) {
 
 }
 
-
 //Funcion para ocultar el div de cifrado | Function to hide the cipher div
 function change1() {
 
@@ -23,8 +51,7 @@ function change1() {
     containerDecipher.classList.add("move-left");
 }
 
-
-//funcion para ocultar el div de descifrado | function to hide the decipher div.
+//Funcion para ocultar el div de descifrado | Function to hide the decipher div.
 function change2() {
 
     containerCipher.style.display = "block";
@@ -32,7 +59,6 @@ function change2() {
     containerCipher.classList.add("move-right");
 
 }
-
 
 //Funcion para cifrar el texto | Function to encrypt the text
 function cipher() {
@@ -92,7 +118,6 @@ function cipher() {
     document.getElementById('output-cipher').value = textCipher.join("");
 }
 
-
 //funcion para descifrar el texto | function to decrypt the text
 function decipher() {
 
@@ -146,7 +171,6 @@ function decipher() {
             }
         }
     }
-    
     
     //Mostrar el texto decifrado | Show the decrypted text
     document.getElementById('output-decipher').value = textDecipher.join("");
