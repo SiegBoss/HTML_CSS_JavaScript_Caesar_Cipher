@@ -6,13 +6,20 @@ function toggleMode(mode) {
     const cipher = document.getElementById('cipher-container');
     const decipher = document.getElementById('decipher-container');
 
+    //Agregar la clase fade a los contenedores | Add the fade class to the containers
+    //'fade' es una clase CSS que aplica una animación de desvanecimiento | 'fade' is a CSS class that applies a fade animation
     cipher.classList.add('fade');
     decipher.classList.add('fade');
 
+    //Esperar a que la animación termine antes de cambiar el modo | Wait for the animation to finish before changing the mode
     if (mode === 'decipher') {
+
+        //'hidden' es una clase CSS que oculta el elemento | 'hidden' is a CSS class that hides the element
         cipher.classList.add('hidden');
         decipher.classList.remove('hidden');
-    } else {
+
+    } 
+    else {
         decipher.classList.add('hidden');
         cipher.classList.remove('hidden');
     }
@@ -22,30 +29,33 @@ function toggleMode(mode) {
 function toggleTheme() {
     const body = document.body;
     const button = document.querySelector('.theme-toggle');
+
     body.classList.toggle('dark');
+
     if (body.classList.contains('dark')) {
         button.textContent = '☀️ Modo Claro';
-    } else {
+
+    } 
+    else {
         button.textContent = '🌑 Modo Oscuro';
     }
 }
 
 //Funcion para actualizar el valor del input range | Function to update the value of the range input
 function updateNumbers(value) {
-
     document.getElementById('shift-value-cipher').innerHTML = value;
-
 }
 
 function updateNumbers2(value) {
-
     document.getElementById('shift-value-decipher').innerHTML = value;
-
 }
 
 //Funcion para ocultar el div de cifrado | Function to hide the cipher div
 function change1() {
 
+    //"none" es un valor CSS que oculta el elemento | "none" is a CSS value that hides the element
+    //"block" es un valor CSS que muestra el elemento como un bloque | "block" is a CSS value that shows the element as a block
+    //"move-left" es una clase CSS que aplica una animación de movimiento a la izquierda | "move-left" is a CSS class that applies a left movement animation
     containerCipher.style.display = "none";
     containerDecipher.style.display = "block";
     containerDecipher.classList.add("move-left");
@@ -54,6 +64,7 @@ function change1() {
 //Funcion para ocultar el div de descifrado | Function to hide the decipher div.
 function change2() {
 
+    //"moving-right" es una clase CSS que aplica una animación de movimiento a la derecha | "moving-right" is a CSS class that applies a right movement animation
     containerCipher.style.display = "block";
     containerDecipher.style.display = "none";
     containerCipher.classList.add("move-right");

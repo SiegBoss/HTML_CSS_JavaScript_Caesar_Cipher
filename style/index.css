@@ -1,10 +1,13 @@
-/* RESET BÁSICO Y GENERALES */
+/* Estilos Para El Cifrador Y Descifrador César | Styles For Caesar Cipher And Decipherer */
+
+/* Estilos Generales | General Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Cuerpo | Body */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #1e293b;
@@ -17,14 +20,12 @@ body {
     padding: 2rem;
 }
 
-/* Transiciones globales suaves | Smooth global transitions */
+/* Transiciones Globales Suaves | Smooth Global Transitions */
 body, h1, .card, input[type="text"], .theme-toggle, button {
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
-
-/* ------------------------- */
-/* CONTENEDOR PRINCIPAL | MAIN CONTAINER */
+/* Contenedor Principal | Main Container */
 section {
     display: flex;
     flex-wrap: wrap;
@@ -33,13 +34,11 @@ section {
     width: 100%;
 }
 
-/* ------------------------- */
-/* TARJETAS | CARDS */
+/* Tarjetas | Cards */
 .card {
     background-color: #334155;
     padding: 2rem;
     border-radius: 1.5rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
     width: 100%;
     max-width: 400px;
     opacity: 1;
@@ -47,7 +46,6 @@ section {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Tarjeta oculta con transición | Hidden card with transition */
 .card.hidden {
     opacity: 0;
     transform: scale(0.95);
@@ -55,21 +53,16 @@ section {
     position: absolute;
 }
 
-/* Sombra y borde en modo oscuro | Shadow and border in dark mode */
 body.dark .card {
     border: 2px solid #94a3b8;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
 }
 
-/* Sombra y borde en modo claro | Light mode shadow and border */
 body:not(.dark) .card {
     border: 2px solid #1e293b;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
 }
 
-/* ------------------------- */
-/* TÍTULO | TITLE */
+/* Título | Title */
 h1 {
     font-size: 1.75rem;
     text-align: center;
@@ -81,8 +74,7 @@ body:not(.dark) h1 {
     color: #1e293b;
 }
 
-/* ------------------------- */
-/* GRUPO DE ENTRADAS | INPUT GROUP */
+/* Grupo De Entradas | Input Group */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -97,12 +89,12 @@ input[type="text"] {
     font-size: 1rem;
     background-color: #1e293b;
     color: #f1f5f9;
-    box-shadow: inset 0 0 0 2px #475569;
+    
 }
 
 input[type="text"]:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px #3b82f6;
+    
 }
 
 body:not(.dark) input[type="text"] {
@@ -115,8 +107,7 @@ body:not(.dark) input[type="text"]:focus {
     box-shadow: inset 0 0 0 2px #3b82f6;
 }
 
-/* ------------------------- */
-/* SLIDER */
+/* Slider */
 .slider {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -133,8 +124,7 @@ input[type="range"] {
     font-weight: bold;
 }
 
-/* ------------------------- */
-/* BOTONES | BUTTONS */
+/* Botones | Buttons */
 .buttons {
     display: flex;
     flex-direction: column;
@@ -151,7 +141,6 @@ button {
     background-color: #3b82f6;
     cursor: pointer;
     transition: background-color 0.2s;
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
 }
 
 button:hover {
@@ -170,8 +159,7 @@ body:not(.dark) button {
     color: white;
 }
 
-/* ------------------------- */
-/* BOTÓN DE CAMBIO DE TEMA | THEME TOGGLE BUTTON */
+/* Botón De Cambio De Tema | Theme Toggle Button */
 .theme-toggle {
     margin-bottom: 2rem;
     padding: 0.5rem 1rem;
@@ -196,18 +184,16 @@ body:not(.dark) .theme-toggle {
 
 body:not(.dark) .theme-toggle:hover {
     background: #64748b;
-    color: white;
+    color: #1e293b;
 }
 
-/* ------------------------- */
-/* MODO CLARO GENERAL | LIGHT MODE GENERAL */
+/* Modo Claro General | Light Mode General */
 body:not(.dark) {
     background-color: #f8fafc;
     color: #1e293b;
 }
 
-/* ------------------------- */
-/* RESPONSIVE: MÓVILES | MOBILE */
+/* Responsive: Móviles | Mobile */
 @media (max-width: 480px) {
     body {
         padding: 1rem;
@@ -242,8 +228,7 @@ body:not(.dark) {
     }
 }
 
-/* ------------------------- */
-/* RESPONSIVE: TABLETAS | TABLETS */
+/* Responsive: Tabletas | Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
     body {
         padding: 1.5rem;
@@ -278,8 +263,7 @@ body:not(.dark) {
     }
 }
 
-/* ------------------------- */
-/* RESPONSIVE: PANTALLAS GRANDES | LARGE SCREENS */
+/* Responsive: Pantallas Grandes | Large Screens */
 @media (min-width: 769px) and (max-width: 1200px) {
     body {
         padding: 2rem;
