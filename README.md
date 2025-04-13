@@ -1,55 +1,49 @@
-# Cifrado César en HTML, CSS y JavaScript
+# 🔐 Cifrado César con HTML, CSS y JavaScript
 
-Este proyecto es una implementación del Cifrado César realizada con HTML, CSS y JavaScript. 
+Este proyecto es una implementación del **Cifrado César**, desarrollada con **HTML**, **CSS** y **JavaScript**.  
+Permite a los usuarios **cifrar** y **descifrar** mensajes, eligiendo cuántas posiciones se desplazan los caracteres.
 
-Permite a los usuarios cifrar y descifrar mensajes, eligiendo cuántos lugares se desplazan los caracteres.
+## ✨ Funcionalidades
 
-## Funcionalidades
+1. **Cifrado**: Introduce un mensaje y selecciona el número de posiciones para desplazar los caracteres y cifrar tu texto.
+2. **Descifrado**: Introduce un mensaje cifrado y el mismo número de desplazamientos para obtener el mensaje original.
 
-1. `Cifrado`: Introduce un mensaje y el número de lugares que deseas desplazar los caracteres para cifrar tu mensaje.
-2. `Descifrado`: Introduce un mensaje cifrado y el número de lugares que se desplazaron los caracteres para descifrar el mensaje.
+## 🛠️ Tecnologías Utilizadas
 
-## Herramientas de Desarrollo
-
-- HTML
-- CSS
+- HTML  
+- CSS  
 - JavaScript
 
-## Demostración
+## 🔍 Demostración
 
-Puedes ver una demostración del `Cifrado César` en funcionamiento en el siguiente enlace: 
+Puedes ver una demostración en funcionamiento aquí:  https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
 
-https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
+## 📄 Licencia
 
-## Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo [`LICENSE`] para más información.
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
 
-------------------------------
 
-# Caesar Cipher in HTML, CSS and JavaScript
+# 🔐 Caesar Cipher in HTML, CSS and JavaScript
 
-This project is an implementation of the Caesar Cipher made with HTML, CSS and JavaScript.
+This project is an implementation of the **Caesar Cipher**, built using **HTML**, **CSS**, and **JavaScript**.  
+It allows users to **encrypt** and **decrypt** messages by selecting how many positions the characters should be shifted.
 
-It allows users to encrypt and decrypt messages, choosing how many places the characters are shifted.
+## ✨ Features
 
-## Characteristics
+1. **Encryption**: Enter a message and choose how many positions to shift characters to encrypt it.
+2. **Decryption**: Enter the encrypted message and the number of shifts used to reveal the original message.
 
-1. `Encryption` - Enter a message and the number of places you want to move characters to encrypt your message.
-2. `Decrypted` - Enter an encrypted message and the number of places characters were moved to decrypt the message.
+## 🛠️ Technologies Used
 
-## Development tools
-
-- HTML
-- CSS
+- HTML  
+- CSS  
 - JavaScript
 
-## Demo
+## 🔍 Demo
 
-You can see a demonstration of the `Caesar Cipher` in operation at the following link:
+Check out a live demo here:  https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
 
-https://siegboss.github.io/HTML_CSS_JavaScript_Caesar_Cipher/
+## 📄 License
 
-## License
-
-This project is under the MIT license. Check the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [`LICENSE`] file for more details.
