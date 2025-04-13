@@ -22,7 +22,7 @@ Puedes ver una demostración en funcionamiento aquí:  https://siegboss.github.i
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo [`LICENSE`] para más información.
 
-
+---
 
 # 🔐 Caesar Cipher in HTML, CSS and JavaScript
 
