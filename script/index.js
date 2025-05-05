@@ -1,35 +1,31 @@
 const containerCipher = document.getElementById("cipher-container");
 const containerDecipher = document.getElementById("decipher-container");
+const button = document.querySelector('.theme-toggle');
+const body = document.body;
 
 //Funcion para cambiar entre cifrado y descifrado | Function to change between cipher and decipher
-function toggleMode(mode) {
-    const cipher = document.getElementById('cipher-container');
-    const decipher = document.getElementById('decipher-container');
-
+function toggleMode(mode) {;
     //Agregar la clase fade a los contenedores | Add the fade class to the containers
     //'fade' es una clase CSS que aplica una animación de desvanecimiento | 'fade' is a CSS class that applies a fade animation
-    cipher.classList.add('fade');
-    decipher.classList.add('fade');
+    containerCipher.classList.add('fade');
+    containerDecipher.classList.add('fade');
 
     //Esperar a que la animación termine antes de cambiar el modo | Wait for the animation to finish before changing the mode
     if (mode === 'decipher') {
 
         //'hidden' es una clase CSS que oculta el elemento | 'hidden' is a CSS class that hides the element
-        cipher.classList.add('hidden');
-        decipher.classList.remove('hidden');
+        containerCipher.classList.add('hidden');
+        containerDecipher.classList.remove('hidden');
 
     } 
     else {
-        decipher.classList.add('hidden');
-        cipher.classList.remove('hidden');
+        containerDecipher.classList.add('hidden');
+        containerCipher.classList.remove('hidden');
     }
 }
 
 //Funcion para cambiar el tema | Function to change the theme
 function toggleTheme() {
-    const body = document.body;
-    const button = document.querySelector('.theme-toggle');
-
     body.classList.toggle('dark');
 
     if (body.classList.contains('dark')) {
