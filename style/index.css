@@ -1,13 +1,13 @@
 /* Estilos Para El Cifrador Y Descifrador César | Styles For Caesar Cipher And Decipherer */
 
-/* Estilos Generales | General Styles */
+/* Estilos Generales: Reseteo de márgenes y paddings, box-sizing | General Styles: Margin and padding reset, box-sizing */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Cuerpo | Body */
+/* Estilos del Body: Fuente, color de fondo y texto, centrado y disposición | Body Styles: Font, background and text color, centering and layout */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #1e293b;
@@ -19,12 +19,12 @@ body {
     padding: 2rem;
 }
 
-/* Transiciones Globales Suaves | Smooth Global Transitions */
+/* Transiciones globales para varios elementos | Global transitions for various elements */
 body, h1, .card, input[type="text"], .theme-toggle, button {
     transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Contenedor Principal | Main Container */
+/* Contenedor principal de las tarjetas | Main container for cards */
 section {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ section {
     width: 100%;
 }
 
-/* Tarjetas | Cards */
+/* Estilos base de las tarjetas: Fondo, padding, bordes redondeados, ancho y transiciones | Base styles for cards: Background, padding, rounded borders, width and transitions */
 .card {
     background-color: #334155;
     padding: 2rem;
@@ -45,6 +45,7 @@ section {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Estilos para ocultar la tarjeta | Styles for hiding the card */
 .card.hidden {
     opacity: 0;
     transform: scale(0.95);
@@ -52,6 +53,7 @@ section {
     position: absolute;
 }
 
+/* Bordes de las tarjetas según el tema (oscuro y claro) | Card borders depending on the theme (dark and light) */
 body.dark .card {
     border: 2px solid #94a3b8;
 }
@@ -61,7 +63,7 @@ body:not(.dark) .card {
     background-color: #ffffff;
 }
 
-/* Título | Title */
+/* Estilos del título principal: Tamaño, alineación, margen inferior y color según el tema | Main title styles: Size, alignment, bottom margin and color depending on the theme */
 h1 {
     font-size: 1.75rem;
     text-align: center;
@@ -73,7 +75,7 @@ body:not(.dark) h1 {
     color: #1e293b;
 }
 
-/* Grupo De Entradas | Input Group */
+/* Contenedor de los elementos de entrada: Disposición y espaciado | Input elements container: Layout and spacing */
 .input-group {
     display: flex;
     flex-direction: column;
@@ -81,6 +83,7 @@ body:not(.dark) h1 {
     margin-bottom: 1.5rem;
 }
 
+/* Estilos de los campos de texto: Padding, borde, radio, fuente y colores según el tema | Text field styles: Padding, border, radius, font and colors depending on the theme */
 input[type="text"] {
     padding: 0.75rem 1rem;
     border: none;
@@ -88,12 +91,10 @@ input[type="text"] {
     font-size: 1rem;
     background-color: #1e293b;
     color: #f1f5f9;
-    
 }
 
 input[type="text"]:focus {
     outline: none;
-    
 }
 
 body:not(.dark) input[type="text"] {
@@ -106,13 +107,14 @@ body:not(.dark) input[type="text"]:focus {
     box-shadow: inset 0 0 0 2px #3b82f6;
 }
 
-/* Botones | Buttons */
+/* Contenedor de los botones: Disposición y espaciado | Buttons container: Layout and spacing */
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+/* Estilos base de los botones: Padding, fuente, peso, borde, radio, color de texto y fondo, cursor y transición | Base styles for buttons: Padding, font, weight, border, radius, text and background color, cursor and transition */
 button {
     padding: 0.75rem;
     font-size: 1rem;
@@ -129,6 +131,7 @@ button:hover {
     background-color: #2563eb;
 }
 
+/* Estilos específicos para el botón de cambio | Specific styles for the change button */
 #change-button {
     background-color: #f97316;
 }
@@ -137,11 +140,12 @@ button:hover {
     background-color: #ea580c;
 }
 
+/* Color del texto de los botones en modo claro | Text color of buttons in light mode */
 body:not(.dark) button {
     color: white;
 }
 
-/* Botón De Cambio De Tema | Theme Toggle Button */
+/* Estilos del botón de cambio de tema: Margen inferior, padding, fondo, borde, radio, color de texto, peso, cursor y transición | Theme toggle button styles: Bottom margin, padding, background, border, radius, text color, weight, cursor and transition */
 .theme-toggle {
     margin-bottom: 2rem;
     padding: 0.5rem 1rem;
@@ -159,6 +163,7 @@ body:not(.dark) button {
     color: #1e293b;
 }
 
+/* Estilos del botón de cambio de tema en modo claro */
 body:not(.dark) .theme-toggle {
     border-color: #64748b;
     color: #1e293b;
@@ -169,29 +174,32 @@ body:not(.dark) .theme-toggle:hover {
     color: #1e293b;
 }
 
-/* Modo Claro General | Light Mode General */
+/* Estilos generales para el modo claro: Fondo y color de texto del body | General styles for light mode: Body background and text color */
 body:not(.dark) {
     background-color: #f8fafc;
     color: #1e293b;
 }
 
-/* Slider */
+/* Estilos del contenedor del slider: Alineación y margen inferior | Slider container styles: Alignment and bottom margin */
 .slider {
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
+/* Estilos del input de tipo range: Ancho y cursor | Range input styles: Width and cursor */
 input[type="range"] {
     width: 100%;
     cursor: pointer;
 }
 
+/* Estilos del párrafo del slider: Margen superior, tamaño y peso de la fuente | Slider paragraph styles: Top margin, font size and weight */
 .slider p {
     margin-top: 0.5rem;
     font-size: 1.25rem;
     font-weight: bold;
 }
 
+/* Estilos base del input de tipo range: Apariencia, ancho, alto, radio, fondo, outline y transición | Base styles for range input: Appearance, width, height, radius, background, outline and transition */
 input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
@@ -203,10 +211,12 @@ input[type="range"] {
     transition: background 0.3s;
 }
 
+/* Estilos del fondo del slider en modo claro | Slider background styles in light mode */
 body:not(.dark) input[type="range"] {
     background: #cbd5e1;
 }
 
+/* Estilos del thumb del slider para WebKit y Moz: Apariencia, ancho, alto, radio, fondo, cursor, borde y sombra | Slider thumb styles for WebKit and Moz: Appearance, width, height, radius, background, cursor, border and shadow */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -231,19 +241,20 @@ input[type="range"]::-moz-range-thumb {
     transition: background 0.3s;
 }
 
-body.dark input[type="range"]::-webkit-slider-thumb,
-body.dark input[type="range"]::-moz-range-thumb {
+/* Estilos del thumb del slider en modo oscuro | Slider thumb styles in dark mode */
+    body.dark input[type="range"]::-webkit-slider-thumb,
+    body.dark input[type="range"]::-moz-range-thumb {
     background: #2563eb;
 }
 
-/* Pulgar en modo claro */
-body:not(.dark) input[type="range"]::-webkit-slider-thumb,
-body:not(.dark) input[type="range"]::-moz-range-thumb {
-    background: #3b82f6;
+/* Estilos del thumb del slider en modo claro | Slider thumb styles in light mode */
+    body:not(.dark) input[type="range"]::-webkit-slider-thumb,
+    body:not(.dark) input[type="range"]::-moz-range-thumb {
+    background: #3b82f6; 
 }
 
-
-/* Responsive: Móviles | Mobile */
+/* Media queries para diseño responsive en diferentes tamaños de pantalla | Media queries for responsive design on different screen sizes */
+/* Estilos para pantallas con un ancho máximo de 480px (móviles) | Styles for screens with a maximum width of 480px (mobiles) */
 @media (max-width: 480px) {
     body {
         padding: 1rem;
@@ -278,7 +289,7 @@ body:not(.dark) input[type="range"]::-moz-range-thumb {
     }
 }
 
-/* Responsive: Tabletas | Tablets */
+/* Estilos para pantallas entre 481px y 768px de ancho (tabletas) | Styles for screens between 481px and 768px wide (tablets) */
 @media (min-width: 481px) and (max-width: 768px) {
     body {
         padding: 1.5rem;
@@ -313,7 +324,7 @@ body:not(.dark) input[type="range"]::-moz-range-thumb {
     }
 }
 
-/* Responsive: Pantallas Grandes | Large Screens */
+/* Estilos para pantallas entre 769px y 1200px de ancho (pantallas grandes) | Styles for screens between 769px and 1200px wide (large screens) */
 @media (min-width: 769px) and (max-width: 1200px) {
     body {
         padding: 2rem;
